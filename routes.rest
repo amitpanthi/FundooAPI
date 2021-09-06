@@ -1,0 +1,23 @@
+GET http://localhost:3000/user/
+
+###
+
+POST http://localhost:3000/user/userSignUp
+Content-Type: application/json
+
+{
+    "firstName": "A",
+    "lastName": "Defasd",
+    "email": "teasd@yahoo.com",
+    "password": "4532DS"
+}
+
+###
+
+GET http://localhost:3000/user/login/
+Content-Type: application/json
+
+{
+    "email": "teasd@yahoo.com",
+    "password": "4532DS"
+}
