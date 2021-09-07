@@ -6,9 +6,9 @@ POST http://localhost:3000/user/userSignUp
 Content-Type: application/json
 
 {
-    "firstName": "A",
-    "lastName": "Defasd",
-    "email": "teasd@yahoo.com",
+    "firstName": "Abc",
+    "lastName": "De",
+    "email": "teahoo.com",
     "password": "4532DS"
 }
 
@@ -18,6 +18,6 @@ GET http://localhost:3000/user/login/
 Content-Type: application/json
 
 {
-    "email": "teasd@yahoo.com",
+    "email": "test@yahoo.com",
     "password": "4532DS"
 }

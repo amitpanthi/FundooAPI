@@ -1,5 +1,7 @@
 const User = require("../models/User")
 const { validationResult, check } = require("express-validator")
+const logger = require("../logger/logger")
+const DEFAULT_LOG_STRING = `${new Date().toLocaleString()}: `
 
 let userControls = {
     async getUserByEmail(request, response, next){
@@ -8,6 +10,7 @@ let userControls = {
         try{
             user = await User.find({email:request.body.email})
         } catch (err) {
+            logger.error(DEFAULT_LOG_STRING + `Status 500: ${err.message}`)
             return res.status(500).json({ message:err.message })
         }
 
@@ -17,18 +20,21 @@ let userControls = {
 
     async findUserByCredentials(request, response){
         let user
-        
+        console.log(user)
         try{
             user = await User.find({email:request.body.email, password:request.body.password})
-            console.log(user)
+            logger.info(DEFAULT_LOG_STRING + `Query Result: ${user}`)
             if(user.length != 0){
+                logger.info(DEFAULT_LOG_STRING + `Status 200: Successfully queried\n${user}`)
                 return response.status(200).json(user)
             } else {
+                logger.error(DEFAULT_LOG_STRING + `Status 404: Invalid credentials! User not found.`)
                 return response.status(404).json({ message:"Invalid credentials! User not found." })
             }
         } catch (err) {
-            return response.status(404).json({ message:"User not found" })
-    }
+            logger.error(DEFAULT_LOG_STRING + `Status 404: Invalid credentials! User not found.`)
+            return response.status(404).json({ message: err.message })
+        }
     },
 
     async signUpUser(request, response){
@@ -41,13 +47,16 @@ let userControls = {
 
 
         if(response.user.length != 0){
+            logger.error(DEFAULT_LOG_STRING + `Status 422: User already exists.`)
             response.status(422).json({message: "User already exists"})
         } 
         else {
             try{
                 const newUser = await user.save()
+                logger.info(DEFAULT_LOG_STRING + `Successfully signed up: ${user}`)
                 response.status(201).json(newUser)
             } catch(err) {
+                logger.error(DEFAULT_LOG_STRING + `Status 400: ${err.message}.`)
                 response.status(400).json({ message: err.message })
             }
         }
@@ -64,6 +73,7 @@ let userControls = {
         
         const extractedErrors = []
         errors.array().map(err => extractedErrors.push({ [err.param]: err.msg }))
+        logger.error(DEFAULT_LOG_STRING + `Status 422: ${{errors: extractedErrors}}`)
         return response.status(422).json({
             errors: extractedErrors,
           })
