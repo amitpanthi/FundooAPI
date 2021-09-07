@@ -21,3 +21,27 @@ Content-Type: application/json
     "email": "test@yahoo.com",
     "password": "4532DS"
 }
+
+
+###
+POST http://localhost:3000/notes/addNotes
+Content-Type: application/json
+
+{
+    "title": "First Note",
+    "description": "Lorem Ipsum"
+}
+
+
+###
+POST http://localhost:3000/notes/addNotes
+Content-Type: application/json
+
+{
+    "title": "First Note",
+    "description": "Lorem Ipsum",
+    "color": "#FFFFFF"
+}
+
+###
+GET http://localhost:3000/notes/getNotesList

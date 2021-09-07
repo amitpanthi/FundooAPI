@@ -62,3 +62,45 @@ paths:
           description: OK
         '404':
           description: User not found
+  /notes/addNotes:
+    get:
+      tags:
+        - notes
+      summary: Add a new note
+      parameters:
+        - in: body
+          name: New note data
+          required: true
+          schema:
+            type: object
+            required:
+              - title
+              - description
+            properties:
+              title:
+                type: string
+              description:
+                type: string
+              color:
+                type: string
+              isPinned:
+                type: boolean
+              isArchived:
+                type: boolean
+      produces: [application/json]
+      responses:
+        '201':
+          description: Object created successfully
+        '400':
+          description: Server side error
+  /notes/getNotesList:
+    get:
+      tags:
+        - notes
+      summary: Get all new note
+      produces: [application/json]
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: User not found
