@@ -1,0 +1,64 @@
+swagger: '2.0'
+info:
+  title: FundooAPI
+  description: API Documentation for FundooAPI, a notes-keeping API.
+  version: 1.0.0
+paths:
+  /user/userSignUp:
+    post:
+      tags:
+        - user
+      summary: Register a user.
+      parameters:
+        - in: body
+          name: User Data
+          required: true
+          schema:
+            type: object
+            required:
+              - firstName
+              - lastName
+              - email
+              - password
+            properties:
+              firstName:
+                type: string
+              lastName:
+                type: string
+              email:
+                type: string
+              password:
+                type: string
+      produces: [application/json]
+      responses:
+        '201':
+          description: Object created successfully
+        '400':
+          description: Server side error
+        '422':
+          description: Validation Error/User already exists
+  /user/login:
+    get:
+      tags:
+        - user
+      summary: Login authentication for a user
+      parameters:
+        - in: body
+          name: Login Data
+          required: true
+          schema:
+            type: object
+            required:
+              - email
+              - password
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+      produces: [application/json]
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: User not found
