@@ -1,0 +1,59 @@
+{"message":"08/09/2021, 08:57:53: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"08/09/2021, 08:57:53: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"08/09/2021, 08:57:53: Status 400: Cannot set headers after they are sent to the client.","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:40:22: Status 400: nodeToDelete.save is not a function","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:43:54: Status 400: nodeToDelete is not defined","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:45:15: Status 400: nodeToDelete is not defined","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:45:15: Status 400: nodeToDelete is not defined","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:45:15: Status 400: nodeToDelete is not defined","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:46:11: Status 400: response.nodeToDelete.save is not a function","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:49:33: Status 400: Note validation failed: title: Path `title` is required., description: Path `description` is required.","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:50:14: Status 400: Note validation failed: title: Path `title` is required., description: Path `description` is required.","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:50:14: Status 400: Note validation failed: title: Path `title` is required., description: Path `description` is required.","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:50:14: Status 400: Note validation failed: title: Path `title` is required., description: Path `description` is required.","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:50:14: Status 400: Note validation failed: title: Path `title` is required., description: Path `description` is required.","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:50:14: Status 400: Note validation failed: title: Path `title` is required., description: Path `description` is required.","level":"error","service":"user-service"}
+{"message":"08/09/2021, 21:50:14: Status 400: Note validation failed: title: Path `title` is required., description: Path `description` is required.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:10:09: Status 500: res is not defined","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:10:09: Status 500: res is not defined","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:11:41: Status 500: res is not defined","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:13:32: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:13:32: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:13:32: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:26:28: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:26:28: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:26:28: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:26:28: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:26:28: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:26:28: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:26:28: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:26:28: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:33:56: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:33:56: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:33:56: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 18:34:24: Status 404: Invalid credentials! User not found.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:22:24: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:22:24: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:22:24: Status 400: Cannot set headers after they are sent to the client.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:24:59: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:24:59: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:26:09: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:26:09: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:27:42: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"13/09/2021, 21:27:42: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:29:46: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:29:46: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:31:13: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:31:13: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:32:32: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:32:32: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:34:58: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:34:58: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:34:58: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:34:58: Status 400: Cannot set headers after they are sent to the client.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:52:30: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:52:30: Status 400: Cannot set headers after they are sent to the client.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:59:19: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:59:19: Status 400: Cannot set headers after they are sent to the client.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:59:19: Status 422: [object Object]","level":"error","service":"user-service"}
+{"message":"14/09/2021, 06:59:19: Status 422: User already exists.","level":"error","service":"user-service"}

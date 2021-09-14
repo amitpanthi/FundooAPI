@@ -2,11 +2,21 @@ const User = require("../models/User")
 const { validationResult, check } = require("express-validator")
 const logger = require("../logger/logger")
 const DEFAULT_LOG_STRING = `${new Date().toLocaleString()}: `
+const bcrypt = require("bcrypt")
 
 let userControls = {
-    async getUserByEmail(request, response, next){
-        let user
+    async getUsers(request, response){
+        try{
+            const user = await User.find()
+            logger.info(DEFAULT_LOG_STRING + "Successfully queried all users")
+            response.status(200).json(user)
+        } catch(err) {
+            logger.error(DEFAULT_LOG_STRING + `Status 500: ${err.message}`)
+            response.status(500).json({ message:err.message })
+        }
+    },
 
+    async getUserByEmail(request, response, next){
         try{
             user = await User.find({email:request.body.email})
         } catch (err) {
@@ -20,13 +30,20 @@ let userControls = {
 
     async findUserByCredentials(request, response){
         let user
-        console.log(user)
+        
         try{
-            user = await User.find({email:request.body.email, password:request.body.password})
+            user = await User.find({email:request.body.email})
             logger.info(DEFAULT_LOG_STRING + `Query Result: ${user}`)
             if(user.length != 0){
-                logger.info(DEFAULT_LOG_STRING + `Status 200: Successfully queried\n${user}`)
-                return response.status(200).json(user)
+                let passMatch = bcrypt.compare(request.body.password, user[0].password)
+
+                if(passMatch){
+                    logger.info(DEFAULT_LOG_STRING + `Status 200: Successfully queried\n${user}`)
+                    return response.status(200).json(user)
+                } else {
+                    logger.info(DEFAULT_LOG_STRING + `Invalid credentials!`)
+                    return response.status(404).json({ message:"Invalid credentials! User not found." })
+                }
             } else {
                 logger.error(DEFAULT_LOG_STRING + `Status 404: Invalid credentials! User not found.`)
                 return response.status(404).json({ message:"Invalid credentials! User not found." })
@@ -38,13 +55,13 @@ let userControls = {
     },
 
     async signUpUser(request, response){
+        let hashedPass = await bcrypt.hash(request.body.password, 10)
         const user = new User({
             firstName: request.body.firstName,
             lastName: request.body.lastName,
             email: request.body.email,
-            password: request.body.password
+            password: hashedPass
         })
-
 
         if(response.user.length != 0){
             logger.error(DEFAULT_LOG_STRING + `Status 422: User already exists.`)
@@ -54,10 +71,10 @@ let userControls = {
             try{
                 const newUser = await user.save()
                 logger.info(DEFAULT_LOG_STRING + `Successfully signed up: ${user}`)
-                response.status(201).json(newUser)
+                return response.status(201).json(newUser)
             } catch(err) {
                 logger.error(DEFAULT_LOG_STRING + `Status 400: ${err.message}.`)
-                response.status(400).json({ message: err.message })
+                return response.status(400).json({ message: err.message })
             }
         }
     },
@@ -68,14 +85,12 @@ let userControls = {
         if(errors.isEmpty()){
             next()
         }
-
-        console.log(errors)
         
         const extractedErrors = []
         errors.array().map(err => extractedErrors.push({ [err.param]: err.msg }))
         logger.error(DEFAULT_LOG_STRING + `Status 422: ${{errors: extractedErrors}}`)
         return response.status(422).json({
-            errors: extractedErrors,
+            errors: extractedErrors
           })
     },
 

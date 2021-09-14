@@ -6,10 +6,10 @@ POST http://localhost:3000/user/userSignUp
 Content-Type: application/json
 
 {
-    "firstName": "Abc",
-    "lastName": "De",
-    "email": "teahoo.com",
-    "password": "4532DS"
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "adminf@yahoo.com",
+    "password": "Password123"
 }
 
 ###
@@ -18,8 +18,8 @@ GET http://localhost:3000/user/login/
 Content-Type: application/json
 
 {
-    "email": "test@yahoo.com",
-    "password": "4532DS"
+    "email": "admintwo@yahoo.com",
+    "password": "Password123"
 }
 
 
@@ -39,9 +39,22 @@ Content-Type: application/json
 
 {
     "title": "First Note",
-    "description": "Lorem Ipsum",
+    "description": "Lorem DIpsum",
     "color": "#FFFFFF"
 }
 
 ###
 GET http://localhost:3000/notes/getNotesList
+
+
+###
+
+PATCH http://localhost:3000/notes/deleteNote/6138d5294dbaec63e2a81c8f
+
+###
+
+PATCH http://localhost:3000/notes/archiveNote/613747deaf5f201cb73364d2
+
+###
+GET http://localhost:3000/user/getAllUsers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWludHdvQHlhaG9vLmNvbSIsInBhc3N3b3JkIjoiUGFzc3dvcmQxMjMiLCJpYXQiOjE2MzE1ODI1NTN9.KmHcsiBHNHDSWVC3gn-8BLDil29afIJXF7--H9ctFto

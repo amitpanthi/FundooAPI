@@ -40,6 +40,28 @@ let notesControl = {
             logger.error(DEFAULT_LOG_STRING + `Status 400: ${err.message}.`)
             response.status(400).json({ message: err.message })
         }
+    },
+
+    async deleteNode(request, response){
+        try{
+            const deletedNote = await Note.findByIdAndUpdate(request.params.id, {isDeleted: true})
+            logger.info(DEFAULT_LOG_STRING + `Successfully Deleted`)
+            response.status(200).json(deletedNote)
+        } catch(err) {
+            logger.error(DEFAULT_LOG_STRING + `Status 400: ${err.message}`)
+            response.status(400).json({message: err.message})
+        }
+    },
+
+    async archiveNote(request, response){
+        try{
+            const archivedNote = await Note.findByIdAndUpdate(request.params.id, {isArchived: true})
+            logger.info(DEFAULT_LOG_STRING + `Successfully Archived`)
+            response.status(200).json(archivedNote)
+        } catch(err) {
+            logger.error(DEFAULT_LOG_STRING + `Status 400: ${err.message}`)
+            response.status(400).json({message: err.message})
+        }
     }
 }
 
