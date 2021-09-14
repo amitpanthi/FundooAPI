@@ -58,3 +58,22 @@ PATCH http://localhost:3000/notes/archiveNote/613747deaf5f201cb73364d2
 ###
 GET http://localhost:3000/user/getAllUsers
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWludHdvQHlhaG9vLmNvbSIsInBhc3N3b3JkIjoiUGFzc3dvcmQxMjMiLCJpYXQiOjE2MzE1ODI1NTN9.KmHcsiBHNHDSWVC3gn-8BLDil29afIJXF7--H9ctFto
+
+
+###
+
+POST http://localhost:3000/user/forgotPassword
+Content-Type: application/json
+
+{
+    "email": "adminf@yahoo.com"
+}
+
+
+###
+
+POST http://localhost:3000/user/resetPassword/613ffaf6d368c951adb254a7
+
+{
+    "password": "newPass123"
+}

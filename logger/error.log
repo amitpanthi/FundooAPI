@@ -57,3 +57,8 @@
 {"message":"14/09/2021, 06:59:19: Status 400: Cannot set headers after they are sent to the client.","level":"error","service":"user-service"}
 {"message":"14/09/2021, 06:59:19: Status 422: [object Object]","level":"error","service":"user-service"}
 {"message":"14/09/2021, 06:59:19: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 17:50:39: Couldn't send mail","level":"error","service":"user-service"}
+{"message":"14/09/2021, 17:50:39: Couldn't send mail","level":"error","service":"user-service"}
+{"message":"14/09/2021, 17:53:22: Couldn't send mail","level":"error","service":"user-service"}
+{"message":"14/09/2021, 18:05:07: Status 500: Cannot read property 'id' of undefined","level":"error","service":"user-service"}
+{"message":"14/09/2021, 18:11:08: Status 500: req is not defined","level":"error","service":"user-service"}

@@ -149,3 +149,17 @@
 {"message":"14/09/2021, 06:59:19: Status 400: Cannot set headers after they are sent to the client.","level":"error","service":"user-service"}
 {"message":"14/09/2021, 06:59:19: Status 422: [object Object]","level":"error","service":"user-service"}
 {"message":"14/09/2021, 06:59:19: Status 422: User already exists.","level":"error","service":"user-service"}
+{"message":"14/09/2021, 17:45:32: Got User: {\n  _id: new ObjectId(\"613ffaf6d368c951adb254a7\"),\n  firstName: 'John',\n  lastName: 'Doe',\n  email: 'adminf@yahoo.com',\n  password: '$2b$10$MZvYzqszRh.7BXpn2380VO3ec9axu1N5GmczqcTG9vTcU5JjWsm9W',\n  __v: 0\n}","level":"info","service":"user-service"}
+{"message":"14/09/2021, 17:49:41: Got User: {\n  _id: new ObjectId(\"613ffaf6d368c951adb254a7\"),\n  firstName: 'John',\n  lastName: 'Doe',\n  email: 'adminf@yahoo.com',\n  password: '$2b$10$MZvYzqszRh.7BXpn2380VO3ec9axu1N5GmczqcTG9vTcU5JjWsm9W',\n  __v: 0\n}","level":"info","service":"user-service"}
+{"message":"14/09/2021, 17:50:38: Got User: {\n  _id: new ObjectId(\"613ffaf6d368c951adb254a7\"),\n  firstName: 'John',\n  lastName: 'Doe',\n  email: 'adminf@yahoo.com',\n  password: '$2b$10$MZvYzqszRh.7BXpn2380VO3ec9axu1N5GmczqcTG9vTcU5JjWsm9W',\n  __v: 0\n}","level":"info","service":"user-service"}
+{"message":"14/09/2021, 17:50:39: Couldn't send mail","level":"error","service":"user-service"}
+{"message":"14/09/2021, 17:50:38: Got User: {\n  _id: new ObjectId(\"613ffaf6d368c951adb254a7\"),\n  firstName: 'John',\n  lastName: 'Doe',\n  email: 'adminf@yahoo.com',\n  password: '$2b$10$MZvYzqszRh.7BXpn2380VO3ec9axu1N5GmczqcTG9vTcU5JjWsm9W',\n  __v: 0\n}","level":"info","service":"user-service"}
+{"message":"14/09/2021, 17:50:39: Couldn't send mail","level":"error","service":"user-service"}
+{"message":"14/09/2021, 17:53:22: Got User: {\n  _id: new ObjectId(\"613ffaf6d368c951adb254a7\"),\n  firstName: 'John',\n  lastName: 'Doe',\n  email: 'adminf@yahoo.com',\n  password: '$2b$10$MZvYzqszRh.7BXpn2380VO3ec9axu1N5GmczqcTG9vTcU5JjWsm9W',\n  __v: 0\n}","level":"info","service":"user-service"}
+{"message":"14/09/2021, 17:53:22: Couldn't send mail","level":"error","service":"user-service"}
+{"message":"14/09/2021, 17:53:22: Got User: {\n  _id: new ObjectId(\"613ffaf6d368c951adb254a7\"),\n  firstName: 'John',\n  lastName: 'Doe',\n  email: 'adminf@yahoo.com',\n  password: '$2b$10$MZvYzqszRh.7BXpn2380VO3ec9axu1N5GmczqcTG9vTcU5JjWsm9W',\n  __v: 0\n}","level":"info","service":"user-service"}
+{"message":"14/09/2021, 17:53:22: Mail sent successfully","level":"info","service":"user-service"}
+{"message":"14/09/2021, 18:05:07: Status 500: Cannot read property 'id' of undefined","level":"error","service":"user-service"}
+{"message":"14/09/2021, 18:11:08: Status 500: req is not defined","level":"error","service":"user-service"}
+{"message":"14/09/2021, 18:11:24: Successfully resetted password","level":"info","service":"user-service"}
+{"message":"14/09/2021, 18:11:24: Successfully resetted password","level":"info","service":"user-service"}

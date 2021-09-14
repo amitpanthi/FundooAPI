@@ -5,6 +5,35 @@ const DEFAULT_LOG_STRING = `${new Date().toLocaleString()}: `
 const bcrypt = require("bcrypt")
 
 let userControls = {
+    async forgotPass(request, response, next){
+        try{
+            let user = await User.findOne({email: request.body.email})
+
+            if(user){
+                logger.info(DEFAULT_LOG_STRING + `Got User: ${user}`)
+                response.status(200).json(user)
+                next()
+            } else {
+                logger.error(DEFAULT_LOG_STRING + `Enter valid email ID`)
+                response.status(404).json({message:"Enter valid email ID"})
+            }
+        } catch(err) {
+            logger.error(DEFAULT_LOG_STRING + `Status 500: ${err.message}`)
+            response.status(500).json({ message:err.message })
+        }
+    },
+
+    async resetPass(request, response){
+        try{
+            await User.updateOne({_id: request.params.id}, {$set: {password: request.body.password}})
+            logger.info(DEFAULT_LOG_STRING + `Successfully resetted password`)
+            response.status(200).json({"message": "OK"})
+        } catch(err) {
+            logger.error(DEFAULT_LOG_STRING + `Status 500: ${err.message}`)
+            response.status(500).json({ message:err.message })
+        }
+    },
+
     async getUsers(request, response){
         try{
             const user = await User.find()
